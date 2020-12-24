@@ -13,3 +13,18 @@ function main() {
   }
   console.log(maxOnes);
 }
+
+
+
+
+// alternative
+
+function main() {
+  const number = parseInt(readLine(), 10);
+  const binaryOnes = number.toString(2).split(0);
+  let maxConsecutiveOnes = 0;
+  binaryOnes.map(
+    (element) => (maxConsecutiveOnes = Math.max(maxConsecutiveOnes, element.length))
+  );
+  console.log(maxConsecutiveOnes);
+}
