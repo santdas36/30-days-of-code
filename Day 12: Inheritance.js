@@ -6,20 +6,17 @@ class Student extends Person {
 
   calculate() {
     const sum = this.scores.reduce((prev, curr) => prev + curr, 0);
-    let grade;
     const avg = sum / this.scores.length;
-    avg >= 90
-      ? (grade = "O")
+    return avg >= 90
+      ? "O"
       : avg < 100 && avg >= 80
-      ? (grade = "E")
+      ? "E"
       : avg < 80 && avg >= 70
-      ? (grade = "A")
+      ? "A"
       : avg < 70 && avg >= 55
-      ? (grade = "P")
+      ? "P"
       : avg < 55 && avg >= 40
-      ? (grade = "D")
-      : (grade = "T");
-      
-    return grade;
+      ? "D"
+      : "T";
   }
 }
